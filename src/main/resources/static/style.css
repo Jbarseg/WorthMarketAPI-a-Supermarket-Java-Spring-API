@@ -10,6 +10,7 @@ header {
     width: 100%;
     height: 100px;
     align-items: center;
+    border-bottom-style: double;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -256,8 +257,39 @@ ul li {
 }
 
 footer {
+    display: flex;
     margin-top: 5px;
     width: 100%;
-    height: 100px;
-    background-color: #04634b;
+    height: 250px;
+    background-color: #0c2a2e;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.railway-logo {
+    height: 70px;
+    width: 200px;
+}
+
+footer h4 {
+    font-size: 10px;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.footer-nav li a {
+    text-decoration: none;
 }

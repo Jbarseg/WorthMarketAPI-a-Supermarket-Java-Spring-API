@@ -265,10 +265,41 @@ ul li {
 }
 
 footer {
+    display: flex;
     margin-top: 5px;
     width: 100%;
-    height: 100px;
-    background-color: #04634b;
+    height: 250px;
+    background-color: #0c2a2e;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h2 {
+    font-size: 15px;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.railway-logo {
+    height: 70px;
+    width: 200px;
+}
+
+footer h4 {
+    font-size: 10px;
+    color: white;
+}
+
+.footer-nav {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.footer-nav li a {
+    text-decoration: none;
 }
     </style>
 </head>
@@ -474,6 +505,15 @@ footer {
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <ul class="footer-nav">
+            <li><a href="http://localhost:8080/" style="color: #208ea1;"><b>Home</b></a></li>
+            <li><a href="http://localhost:8080/documentation" style="color: #208ea1;"><b>Documentation</b></a></li>
+            <li><a href="http://localhost:8080/about" style="color: #208ea1;"><b>About</b></a></li>
+        </ul>
+        <h2><b><a style="color: #04634b;">❮Developed❯ </a><a style="color: #197383;" href="https://github.com/Jbarseg">by Jonathan D. Barrantes Segovia (Jbarseg)</a></b></h2>
+        <img class="railway-logo" src="https://i.ibb.co/7Qd2M1B/Railway-Logo.png"/>
+        <h4 style="color: white;">Deploys by</h4>
+    </footer>
 </body>
 </html>
