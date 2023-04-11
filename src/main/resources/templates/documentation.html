@@ -1,0 +1,802 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="./documentation.css"/>
+    <link rel="icon" href="https://i.ibb.co/pLcVp4J/Worth-Market-API-Logo-PNG-4.png" type="image/icon type">
+    <style type="text/css">
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    border-bottom-style: double;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    margin: 0 30px;
+    width: 130px;
+    height: 80px;
+}
+
+.header-nav {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.index-nav {
+    display: flex;
+    color: #04634b;
+    margin-right: 30px;
+    list-style: none;
+    flex-direction: row;
+}
+
+.index-nav li {
+    margin: 0 10px;
+}
+
+.index-nav li a {
+    text-decoration: none;
+    color: #04634b;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 7600px;
+    background-color: white;
+}
+
+.main-div {
+    display: flex;
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    width: 90%;
+    height: 99%;
+}
+
+.main-div article section section h1 {
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+.main-div article section section h2 {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.main-div article section section p {
+    margin-top: 10px;
+}
+
+.main-div article section section {
+    margin-top: 20px;
+}
+
+.section-method {
+    display: flex;
+    width: 500px;
+    height: 100px;
+    background-color: #0c2a2e;
+    margin-top: 20px;
+    border-radius: 20px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-method code {
+    margin-left: 25px;
+}
+
+.section-preview {
+    display: flex;
+    height: 350px;
+    width: 500px;
+    background-color: #0c2a2e;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.section-preview code {
+    margin-left: 25px;
+}
+
+.section-preview-2 {
+    display: flex;
+    height: 200px;
+    width: 500px;
+    background-color: #0c2a2e;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.section-preview-2 code {
+    margin-left: 25px;
+}
+
+.item-name {
+    color: #057c5e;
+}
+
+.item-text {
+    color: #208ea1;
+}
+
+.item-number {
+    color: #28c4c4;
+}
+
+.item-punctuation {
+    color: gray;
+}
+
+.schema, th, td {
+    margin-top: 10px;
+    border-color: #04634b;
+    border: 1px solid;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.schema {
+    width: 90%;
+    height: 50%;
+    background-color: #0c2a2e;
+    border-radius: 20px;
+}
+
+td b {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #057c5e;
+}
+
+tr td {
+    color: white;
+    height: 40px;
+}
+
+tr td code {
+    color: #208ea1;
+}
+
+.resume img {
+    display: flex;
+    width: 450px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.rest div {
+    display: flex;
+    height: 150px;
+    width: 500px;
+    background-color: #0c2a2e;
+    margin-top: 10px;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 20px;
+}
+
+.rest div code {
+    margin-left: 25px;
+}
+
+.rest ul {
+    display: flex;
+    margin-top: 10px;
+    margin-left: 5px;
+    flex-direction: row;
+}
+
+.rest ul li {
+    list-style: none;
+    margin-right: 30px;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    border: 3px;
+    border-radius: 15%;
+    border-style: solid;
+    border-color: #208ea1;
+    background-color: #0c2a2e;
+}
+
+button code {
+    color: #057c5e;
+}
+
+a {
+    text-decoration: none;
+}
+
+aside {
+    display: flex;
+    width: 20%;
+    height: 755px;
+    background-color: white;
+    flex-direction: column-reverse;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-right-color: black;
+    border-right-style: double;
+    align-items: center;
+}
+
+.documentation-nav {
+    display: flex;
+    width: 90%;
+    height: 95%;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.documentation-nav h1 {
+    font-size: 20px;
+    color: #057c5e;
+    margin-top: 10px;
+}
+
+.documentation-nav ul li {
+    font-size: 15px;
+    color: black;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+footer {
+    margin-top: 5px;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    background-color: #04634b;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="https://i.ibb.co/pLcVp4J/Worth-Market-API-Logo-PNG-4.png" href="http://localhost:8080/"/>
+        <nav class="header-nav">
+            <ul class="index-nav">
+                <li><a href="http://localhost:8080/"><b>Home</b></a></li>
+                <li><a href="http://localhost:8080/documentation"><b>Documentation</b></a></li>
+                <li><a href="http://localhost:8080/about"><b>About</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+            <article class="documentation-nav">
+                <section class="introduction-nav">
+                    <h1><a href="#documentation-id" style="color: #04634b;">Documentation</a></h1>
+                    <ul>
+                        <li><a href="#resume-id" style="color: black;">Resume</a></li>
+                        <li><a href="#rest-id" style="color: black;">REST</a></li>
+                        <li><a href="#github-id" style="color: black;">API on Github</a></li>
+                    </ul>
+                </section>
+                <section class="products-nav">
+                    <h1><a href="#products-id" style="color: #04634b;">Products</a></h1>
+                    <ul>
+                        <li><a href="#productschema-id" style="color: black;">Product schema</a></li>
+                        <li><a href="#galpr-id" style="color: black;">Get all products</a></li>
+                        <li><a href="#gaspr-id" style="color: black;">Get a specific product</a></li>
+                        <li><a href="#spr-id" style="color: black;">Save a new product</a></li>
+                        <li><a href="#dpr-id" style="color: black;">Delete a product</a></li>
+                    </ul>
+                </section>
+                <section class="categories-nav">
+                    <h1><a href="#categories-id" style="color: #04634b;">Categories</a></h1>
+                    <ul>
+                        <li><a href="#categoryschema-id" style="color: black;">Category schema</a></li>
+                        <li><a href="#gaca-id" style="color: black;">Get all categories</a></li>
+                        <li><a href="#gasca-id" style="color: black;">Get a product by category</a></li>
+                        <li><a href="#sanca-id" style="color: black;">Save a new category</a></li>
+                        <li><a href="#daca-id" style="color: black;">Delete a category</a></li>
+                    </ul>
+                </section>
+                <section class="purchases-nav">
+                    <h1><a href="#purchases-id" style="color: #04634b;">Purchases</a></h1>
+                    <ul>
+                        <li><a href="#purchaseschema-id" style="color: black;">Purchase schema</a></li>
+                        <li><a href="#gapu-id" style="color: black;">Get all purchases</a></li>
+                        <li><a href="#gaspu-id" style="color: black;">Get the purchases of a specific client</a></li>
+                        <li><a href="#sapu-id" style="color: black;">Save a purchase</a></li>
+                    </ul>
+                </section>
+            </article>
+        </aside>
+        <div class="main-div">
+            <article class="documentation">
+                <h1 style="font-size: 30px; color: #04634b;" id="documentation-id"><b>Documentation</b></h1>
+                <section class="introduction">
+                    <section class="resume">
+                        <h2 style="color: black;" id="resume-id"><b>Resume</b></h2>
+                        <p>This documentation will help you get familiar with the resources of the WorthMarketAPI, so that you can get the most out of it.</p>
+                        <img src="https://i.gifer.com/9Aug.gif"/>
+                    </section>
+                    <section class="rest">
+                        <h2 style="color: black;" id="rest-id"><b>REST</b></h2>
+                        <div>
+                            <code>
+                                <span class="item-name">"products"</span><span class="item-punctuation">: </span> <span class="item-text">"http://localhost:8080/api/products/all"</span><span class="item-punctuation">,</span>
+                            </code>
+                            <code>
+                                <span class="item-name">"categories"</span><span class="item-punctuation">: </span> <span class="item-text">"http://localhost:8080/api/categories/all"</span><span class="item-punctuation">,</span>
+                            </code>
+                            <code>
+                                <span class="item-name">"purchases"</span><span class="item-punctuation">: </span> <span class="item-text">"http://localhost:8080/api/purchases/all"</span>
+                            </code>
+                        </div>
+                        <p>At the moment there are only 3 resources available in the WorthMarketAPI:</p>
+                        <ul>
+                            <li><a href="http://localhost:8080/api/products/all"><b><button><code>Products</code></button></b></a></li>
+                            <li><a href="http://localhost:8080/api/categories/all"><b><button><code>Categories</code></button></b></a></li>
+                            <li><a href="http://localhost:8080/api/purchases/all"><b><button><code>Purchases</code></button></b></a></li>
+                        </ul>
+                    </section>
+                    <section class="github-api">
+                        <h2 style="color: black;" id="github-id"><b>API on GitHub</b></h2>
+                        <p>You can find all the code of this API at: </p>
+                        <a href="https://github.com/Jbarseg/Learning-Spring-and-Spring-Boot" style="text-decoration: none;"><button style="margin-top: 10px;"><code>GitHub</code></button></a>
+                    </section>
+                </section>
+                <section class="products">
+                    <section class="productschema">
+                        <h1 class="item-name" id="products-id"><b>Products</b></h1>
+                        <h2 style="color: black;" id="productschema-id"><b>Product Schema</b></h2>
+                        <p>All the information about products</p>
+                        <table class="schema">
+                            <tr>
+                                <td><b>Key</b></td>
+                                <td><b>Type</b></td>
+                                <td><b>Description</b></td>
+                            </tr>
+                            <tr>
+                                <td><code>productId</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the identifier of the product. It is specific to each of the products.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>productName</code></td>
+                                <td><code>String</code></td>
+                                <td><code>Is the name of the product.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>productCategoryId</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the number of the category of which the product is part.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>productPrice</code></td>
+                                <td><code>Double</code></td>
+                                <td><code>Is the price of the product.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>productStock</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the available quantity of the product.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>productStatus</code></td>
+                                <td><code>Boolean</code></td>
+                                <td><code>It is to know if the product is available or not.</code></td>
+                            </tr>
+                            <tr></tr>
+
+                        </table>
+                    </section>
+                    <section class="getallproducts">
+                        <h2><b><span class="item-text" id="galpr-id">GET</span> <span style="color: black;"> all products</span></b></h2>
+                        <p>To have access to all available products you have to use the <span class="item-text"><b>/products/all</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/products/all</span>
+                            </code>
+                        </div>
+                        <div class="section-preview">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"productId"</span><span class="item-punctuation">: </span><span class="item-number">2</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productName"</span><span class="item-punctuation">: </span><span class="item-text">"Mango"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategoryId"</span><span class="item-punctuation">: </span><span class="item-number">1</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productPrice"</span><span class="item-punctuation">: </span><span class="item-number">2100.0</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStock"</span><span class="item-punctuation">: </span><span class="item-number">250</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategory"</span><span class="item-punctuation">: </span><span class="item-punctuation">{</span>
+            <span class="item-name">"categoryId"</span><span class="item-punctuation">: </span><span class="item-number">0</span><span class="item-punctuation">,</span>
+            <span class="item-name">"category"</span><span class="item-punctuation">: </span><span class="item-text">""</span><span class="item-punctuation">,</span>
+            <span class="item-name">"categoryStatus"</span><span class="item-punctuation">: </span><span class="item-text">false</span>
+        <span class="item-punctuation">}</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="getspecificproduct">
+                        <h2><b><span class="item-text" id="gaspr-id">GET</span> <span style="color: black;"> a specific product</span></b></h2>
+                        <p>To have access to a specific product you have to use the <span class="item-text"><b>/products/{id}</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/products/{id}</span>
+                            </code>
+                        </div>
+                        <div class="section-preview">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"productId"</span><span class="item-punctuation">: </span><span class="item-number">48</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productName"</span><span class="item-punctuation">: </span><span class="item-text">"Cereal"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategoryId"</span><span class="item-punctuation">: </span><span class="item-number">8</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productPrice"</span><span class="item-punctuation">: </span><span class="item-number">7000.0</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStock"</span><span class="item-punctuation">: </span><span class="item-number">75</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategory"</span><span class="item-punctuation">: </span><span class="item-punctuation">{</span>
+            <span class="item-name">"categoryId"</span><span class="item-punctuation">: </span><span class="item-number">0</span><span class="item-punctuation">,</span>
+            <span class="item-name">"category"</span><span class="item-punctuation">: </span><span class="item-text">""</span><span class="item-punctuation">,</span>
+            <span class="item-name">"categoryStatus"</span><span class="item-punctuation">: </span><span class="item-text">false</span>
+        <span class="item-punctuation">}</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="saveproduct" id="spr-id">
+                        <h2><b><span class="item-text">SAVE</span> <span style="color: black;"> a new product</span></b></h2>
+                        <p>To post a specific product you have to use the <span class="item-text"><b>/products/save</b></span> endpoint. You have to add a body in some format with Postman or other API platform.</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">POST </span><span style="color: #208ea1;">http://localhost:8080/api/products/save</span>
+                            </code>
+                        </div>
+                        <p>You have to add a body like this:</p>
+                        <div class="section-preview-2">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"productName"</span><span class="item-punctuation">: </span><span class="item-text">"Cereal"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategoryId"</span><span class="item-punctuation">: </span><span class="item-number">8</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productPrice"</span><span class="item-punctuation">: </span><span class="item-number">7000.0</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStock"</span><span class="item-punctuation">: </span><span class="item-number">75</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span><span class="item-punctuation">,</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                        <div class="section-method">
+                            <code>
+                                <span class="item-text">Status</span><span class="item-punctuation">: </span><span class="item-number">200 OK</span>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="deleteproduct" id="dpr-id">
+                        <h2><b><span class="item-text">DELETE</span> <span style="color: black;"> a product</span></b></h2>
+                        <p>To delete a specific product you have to use the <span class="item-text"><b>/products/delete/{id}</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">DELETE </span><span style="color: #208ea1;">http://localhost:8080/api/products/delete/{id}</span>
+                            </code>
+                        </div>
+                        <div class="section-method">
+                            <code>
+                                <span class="item-text">true</span>
+                            </code>
+                        </div>
+                    </section>
+
+                </section>
+
+
+
+                <section class="categories">
+                    <section class="categorieschema">
+                        <h1 class="item-name" id="categories-id"><b>Categories</b></h1>
+                        <h2 id="categoryschema-id"><b>Category Schema</b></h2>
+                        <p>All the information about categories</p>
+                        <table class="schema">
+                            <tr>
+                                <td><b>Key</b></td>
+                                <td><b>Type</b></td>
+                                <td><b>Description</b></td>
+                            </tr>
+                            <tr>
+                                <td><code>categoryId</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the identifier of the category. It is specific to each of the available categories.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>category</code></td>
+                                <td><code>String</code></td>
+                                <td><code>Is the name of the category.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>categoryStatus</code></td>
+                                <td><code>Boolean</code></td>
+                                <td><code>It is to know if the category is available or not.</code></td>
+                            </tr>
+                            <tr></tr>
+
+                        </table>
+                    </section>
+                    <section class="getallcategories">
+                        <h2><b><span class="item-text" id="gaca-id">GET</span> <span style="color: black;"> all categories</span></b></h2>
+                        <p>To have access to all available categories you have to use the <span class="item-text"><b>/categories/all</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/categories/all</span>
+                            </code>
+                        </div>
+                        <div class="section-preview-2">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+            <span class="item-name">"categoryId"</span><span class="item-punctuation">: </span><span class="item-number">1</span><span class="item-punctuation">,</span>
+            <span class="item-name">"category"</span><span class="item-punctuation">: </span><span class="item-text">"Frutas y verduras"</span><span class="item-punctuation">,</span>
+            <span class="item-name">"categoryStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="getspecificcategory">
+                        <h2><b><span class="item-text" id="gasca-id">GET</span> <span style="color: black;"> a specific category</span></b></h2>
+                        <p>To have access to a specific category you have to use the <span class="item-text"><b>/products/category/{id}</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/products/category/{id}</span>
+                            </code>
+                        </div>
+                        <div class="section-preview">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"productId"</span><span class="item-punctuation">: </span><span class="item-number">12</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productName"</span><span class="item-punctuation">: </span><span class="item-text">"Bread"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategoryId"</span><span class="item-punctuation">: </span><span class="item-number">2</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productPrice"</span><span class="item-punctuation">: </span><span class="item-number">4500.0</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStock"</span><span class="item-punctuation">: </span><span class="item-number">120</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span><span class="item-punctuation">,</span>
+        <span class="item-name">"productCategory"</span><span class="item-punctuation">: </span><span class="item-punctuation">{</span>
+            <span class="item-name">"categoryId"</span><span class="item-punctuation">: </span><span class="item-number">2</span><span class="item-punctuation">,</span>
+            <span class="item-name">"category"</span><span class="item-punctuation">: </span><span class="item-text">"Bakery"</span><span class="item-punctuation">,</span>
+            <span class="item-name">"categoryStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span>
+        <span class="item-punctuation">}</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="savecategory">
+                        <h2><b><span class="item-text" id="sanca-id">SAVE</span> <span style="color: black;"> a new category</span></b></h2>
+                        <p>To post a specific product you have to use the <span class="item-text"><b>/categories/save</b></span> endpoint. You have to add a body in some format with Postman or other API platform.</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">POST </span><span style="color: #208ea1;">http://localhost:8080/api/categories/save</span>
+                            </code>
+                        </div>
+                        <p>You have to add a body like this:</p>
+                        <div class="section-preview-2">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"category"</span><span class="item-punctuation">: </span><span class="item-text">"Frutas y verduras"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"categoryStatus"</span><span class="item-punctuation">: </span><span class="item-number">true</span><span class="item-punctuation">,</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                        <div class="section-method">
+                            <code>
+                                <span class="item-text">Status</span><span class="item-punctuation">: </span><span class="item-number">200 OK</span>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="deletecategory">
+                        <h2><b><span class="item-text" id="daca-id">DELETE</span> <span style="color: black;"> a category</span></b></h2>
+                        <p>To delete a specific category you have to use the <span class="item-text"><b>/categories/delete/{id}</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">DELETE </span><span style="color: #208ea1;">http://localhost:8080/api/categories/delete/{id}</span>
+                            </code>
+                        </div>
+                        <div class="section-method">
+                            <code>
+                                <span class="item-text">true</span>
+                            </code>
+                        </div>
+                    </section>
+                </section>
+
+
+
+                <section class="purchases">
+                    <section class="purchaseschema">
+                        <h1 class="item-name" id="purchases-id"><b>Purchases</b></h1>
+                        <h2 id="purchaseschema-id"><b>Purchase Schema</b></h2>
+                        <p>All the information about purchases</p>
+                        <table class="schema">
+                            <tr>
+                                <td><b>Key</b></td>
+                                <td><b>Type</b></td>
+                                <td><b>Description</b></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchaseId</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the identifier of the purchase. It is specific to each of the purchases.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>clientId</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the identifier of the client. It is specific to each of the clients.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchaseDateTime</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is the date the purchase was made.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchasePaymentMethod</code></td>
+                                <td><code>Double</code></td>
+                                <td><code>It is the payment method used for the purchase.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchaseComment</code></td>
+                                <td><code>int</code></td>
+                                <td><code>It is a comment on the purchase.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchaseStatus</code></td>
+                                <td><code>Boolean</code></td>
+                                <td><code>It is to know if the purchase was made or not.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>purchaseItems</code></td>
+                                <td><code>none</code></td>
+                                <td><code>It is the introduction for all the information about the purchase items.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>totalCost</code></td>
+                                <td><code>Double</code></td>
+                                <td><code>It is the total cost for all items in the purchase.</code></td>
+                            </tr>
+                            <tr>
+                                <td><code>itemStatus</code></td>
+                                <td><code>Boolean</code></td>
+                                <td><code>It is to know if the items are available or not.</code></td>
+                            </tr>
+                            <tr></tr>
+
+                        </table>
+                    </section>
+                    <section class="getallpurchases">
+                        <h2><b><span class="item-text" id="gapu-id">GET</span> <span style="color: black;"> all purchases</span></b></h2>
+                        <p>To have access to all available purchases you have to use the <span class="item-text"><b>/purchases/all</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/purchases/all</span>
+                            </code>
+                        </div>
+                        <div class="section-preview">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"purchaseId"</span><span class="item-punctuation">: </span><span class="item-number">1</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientId"</span><span class="item-punctuation">: </span><span class="item-number">"4546221"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseDateTime"</span><span class="item-punctuation">: </span><span class="item-number">"1992-08-10T17:30:00"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchasePaymentMethod"</span><span class="item-punctuation">: </span><span class="item-text">"E"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseComment"</span><span class="item-punctuation">: </span><span class="item-text">""</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseStatus"</span><span class="item-punctuation">: </span><span class="item-text">"P"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseItems"</span><span class="item-punctuation">: </span><span class="item-punctuation">[</span>
+            <span class="item-punctuation">{</span>
+                <span class="item-name">"productId"</span><span class="item-punctuation">: </span><span class="item-number">1</span><span class="item-punctuation">,</span>
+                <span class="item-name">"stock"</span><span class="item-punctuation">: </span><span class="item-number">10</span><span class="item-punctuation">,</span>
+                <span class="item-name">"totalCost"</span><span class="item-punctuation">: </span><span class="item-number">3000.0</span>
+                <span class="item-name">"itemStatus"</span><span class="item-punctuation">: </span><span class="item-text">true</span>
+            <span class="item-punctuation">}</span>
+        <span class="item-punctuation">]</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="getspecificclient">
+                        <h2><b><span class="item-text" id="gaspu-id">GET</span> <span style="color: black;"> the purchases of a specific client</span></b></h2>
+                        <p>To have access to the purchases of a specific client you have to use the <span class="item-text"><b>/purchases/{clientId}</b></span> endpoint</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">GET </span><span style="color: #208ea1;">http://localhost:8080/api/purchases/{clientId}</span>
+                            </code>
+                        </div>
+                        <div class="section-preview-2">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"clientId"</span><span class="item-punctuation">: </span><span class="item-number">2552243</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientName"</span><span class="item-punctuation">: </span><span class="item-text">"Galileo"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientLastname"</span><span class="item-punctuation">: </span><span class="item-text">"Galilei"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientPhone"</span><span class="item-punctuation">: </span><span class="item-number">3462257293</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientLocation"</span><span class="item-punctuation">: </span><span class="item-text">"Cl 1 # 11 - 11"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"clientEmail"</span><span class="item-punctuation">: </span><span class="item-text">"gali@leo.com"</span><span class="item-punctuation">,</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                    </section>
+                    <section class="savepurchase">
+                        <h2><b><span class="item-text" id="sapu-id">SAVE</span> <span style="color: black;"> a purchase</span></b></h2>
+                        <p>To post a specific product you have to use the <span class="item-text"><b>/purchases/save</b></span> endpoint. You have to add a body in some format with Postman or other API platform.</p>
+                        <div class="section-method">
+                            <code>
+                                <span style="color: #057c5e;">POST </span><span style="color: #208ea1;">http://localhost:8080/api/purchases/save</span>
+                            </code>
+                        </div>
+                        <p>You have to add a body like this:</p>
+                        <div class="section-preview-2">
+                            <code>
+                                <pre>
+<span class="item-punctuation">[</span>
+    <span class="item-punctuation">{</span>
+        <span class="item-name">"purchaseDateTime"</span><span class="item-punctuation">: </span><span class="item-number">"1992-08-10T17:30:00"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchasePaymentMethod"</span><span class="item-punctuation">: </span><span class="item-text">"E"</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseComment"</span><span class="item-punctuation">: </span><span class="item-text">""</span><span class="item-punctuation">,</span>
+        <span class="item-name">"purchaseStatus"</span><span class="item-punctuation">: </span><span class="item-text">"P"</span><span class="item-punctuation">,</span>
+    <span class="item-punctuation">}</span>
+<span class="item-punctuation">]</span>              </pre>
+                            </code>
+                        </div>
+                        <div class="section-method">
+                            <code>
+                                <span class="item-text">Status</span><span class="item-punctuation">: </span><span class="item-number">200 OK</span>
+                            </code>
+                        </div>
+                    </section>
+                </section>
+            </article>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
