@@ -3,7 +3,6 @@ package com.github.jbarseg.persistence;
 import java.util.List;
 import java.util.Optional;
 
-import org.checkerframework.checker.nullness.Opt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
