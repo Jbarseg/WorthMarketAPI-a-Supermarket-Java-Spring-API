@@ -60,17 +60,36 @@ header {
 main {
     display: flex;
     width: 100%;
-    height: 7600px;
-    background-color: white;
-}
-
-.main-div {
-    display: flex;
-    width: 80%;
-    height: 100%;
+    height: 550px;
     background-color: white;
     justify-content: center;
     align-items: center;
+}
+
+article {
+    width: 70%;
+    height: 80%;
+}
+
+h1 {
+    font-size: 50px;
+    color: #04634b;
+    margin-bottom: 20px;
+}
+
+.fact {
+    width: 100%;
+    height: 80px;
+    margin: 20px 0;
+}
+
+.fact h2 {
+    font-size: 25px;
+    color: #197383;
+}
+
+.fact p {
+    color: #0c2a2e;
 }
 
 footer {
@@ -127,6 +146,28 @@ footer h4 {
             </ul>
         </nav>
     </header>
+    <main>
+        <article>
+            <h1><b>About</b></h1>
+            <div class="fact">
+                <h2>What is WorthMarketAPI?</h2>
+                <p>WorthMarketAPI is an API in which you will have access to everything that is part of a supermarket. You will have access to predefined products, categories, purchases and customers. You can even add more of each of these entities and delete at your convenience (permissions required).</p>
+            </div>
+            <div class="fact">
+                <h2>Who created WorthMarketAPI?</h2>
+                <p>WorthMarketAPI was created by Jonathan D. Barrantes Segovia, Jbarseg. You can find more about his work at <a href="https://github.com/Jbarseg"; style="text-decoration: none; color: #208ea1;">https://github.com/Jbarseg</a>.</p>
+            </div>
+            <div class="fact">
+                <h2>What technologies were used in the project and what were they used for?</h2>
+                <p>This project was created with the Java programming language. The Spring framework was used to create all the API services, repositories and controllers.</p>
+            </div>
+            <div class="fact">
+                <h2>Where can I find the code for this project?</h2>
+                <p>You can find the code of this API in the following Github repository: <a href="https://github.com/Jbarseg/WorthMarketAPI" style="text-decoration: none; color: #208ea1;">WorthMarketAPI Repository</a>.</p>
+            </div>
+
+        </article>
+    </main>
     <footer>
         <ul class="footer-nav">
             <li><a href="https://worthmarketapi-production.up.railway.app/" style="color: #208ea1;"><b>Home</b></a></li>
